@@ -1,2 +1,5 @@
 venv/
 geckodriver.log
+__pycache__/
+client_secret.json
+credentials.json
