@@ -5,17 +5,15 @@ from selenium.webdriver.common.keys import Keys
 import sys,time
 from  googlecalapi import addtocalapi
 
+fb_id=input("Enter your email ID: ")               #fb_id has your login id
+fb_pwd=input("Enter your facebook password: ")     #fb_pwd has your password
+
 _browser_profile = webdriver.FirefoxProfile()
 _browser_profile.set_preference("dom.webnotifications.enabled", False)
 _browser_profile.set_preference("dom.push.enabled", False)
 driver=webdriver.Firefox(firefox_profile=_browser_profile)
 
-
-
 driver.get("https://www.facebook.com")
-
-fb_id=input("Enter your email ID")               #fb_id has your login id
-fb_pwd=input("Enter your facebook password")     #fb_pwd has your password
 
 login=driver.find_element_by_xpath('//*[@id="email"]')
 login.send_keys(fb_id)
@@ -24,15 +22,11 @@ password=driver.find_element_by_xpath('//*[@id="pass"]')
 password.send_keys(fb_pwd)
 password.send_keys(Keys.ENTER)
 
+
 time.sleep(10)
-events=driver.find_element_by_xpath('/html/body/div[1]/div[3]/div[1]/div/div[2]/div[1]/div/div/div/div/div/div/div[3]/div[3]/ul/li[1]/a/div')
-events.click()
 
-time.sleep(5)
-birthday=driver.find_element_by_xpath('/html/body/div[1]/div[3]/div[1]/div/div[1]/div/div/div[2]/div[3]/a/span')
-birthday.click()
+driver.get("https://facebook.com/events/birthdays")
 
-time.sleep(5)
 SCROLL_PAUSE_TIME = 3
 
 
