@@ -43,7 +43,6 @@ while True:
 html=driver.page_source
 soup=BeautifulSoup(html,'html.parser')
 
-print(soup.title)
 
 month_box=soup.findAll("div",{"class":"_43qm _tzu _43q9"})
 
