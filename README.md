@@ -1,4 +1,4 @@
-# FCUK FB
+# Fakebook
 
 Facebook started loosing its glory ;and the only necessity for it is to remind me of my friends birthdays!
 Graph API doesn't let you access your friends information anymore and hence this tool scrapes information and sends all the birthdays to Google Calendar using Google Calendar API so you'll never miss another birthday!  
